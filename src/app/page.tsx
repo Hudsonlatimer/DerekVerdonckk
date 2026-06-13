@@ -82,14 +82,13 @@ export default function Home() {
           {/* Acting */}
           <div>
             <h3 className="text-lg sm:text-xl font-medium mb-6 pb-2 border-b border-white/10">Acting</h3>
-            <div className="grid gap-4">
-              {actingCredits.map((credit, i) => (
-                <div key={i} className="grid grid-cols-[72px_1fr] sm:grid-cols-[100px_1fr_220px] gap-x-4 gap-y-1">
-                  <div className="text-gray-500 text-sm shrink-0 pt-0.5">{credit.year}</div>
-                  <div className="font-medium text-gray-200">{credit.title}</div>
-                  <div className="text-gray-400 text-sm col-start-2 sm:col-start-3">{credit.role}</div>
-                </div>
-              ))}
+            <div className="grid grid-cols-[72px_1fr] sm:grid-cols-[100px_1fr] gap-x-4">
+              <div className="text-gray-500 text-sm pt-1 leading-snug">2019–<br/>Present</div>
+              <div className="flex flex-col gap-2">
+                {actingCredits.map((credit, i) => (
+                  <span key={i} className="font-medium text-gray-200">{credit.title}</span>
+                ))}
+              </div>
             </div>
           </div>
 
