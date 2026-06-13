@@ -1,5 +1,11 @@
-export const bio =
+export const tagline =
   "Collaborative. Creative. Dependable. For 25 years, Derek has worked with directors, production designers, and creative crews to deliver top-tier storytelling on time, on budget, and always with a collaborative spirit.";
+
+export const bio = `Whether it's bringing an iconic cartoon character to life or creating props for a prime-time television drama, Derek Verdonck loves a good story. More importantly, he knows exactly how to build the worlds they live in.
+
+With over two decades of experience in the animation, virtual production and film industries, Derek's career has been an exciting journey of visual problem-solving. He got his start pushing the boundaries of digital movement, contributing previsualization artistry to the groundbreaking, Academy Award-winning animated short Ryan (2004). From there, he spent years collaborating with major entertainment powerhouses like Disney, Sony, Nelvana, and the Jim Henson Company, serving as a lead animator and layout supervisor.
+
+From Bob the Builder to Bubble Guppies, Derek has helped shape some of the most recognizable animated worlds on television, contributing to projects honoured by the Oscars, Emmys, and Annie Awards. Never content to stand still, Derek is currently expanding his toolkit into virtual production, leveraging Unreal Engine to bridge the gap between traditional filmmaking and real-time digital environments.`;
 
 export const contacts = [
   { platform: "LinkedIn", url: "https://ca.linkedin.com/in/derek-verdonck-05327352", label: "LinkedIn" },
@@ -15,6 +21,65 @@ export type Credit = {
   studio?: string;
   accolades?: string;
 };
+
+export const actingCredits: Credit[] = [
+  { title: "FROM", year: "2019–Present", role: "Season 1–5" },
+  { title: "The Institute", year: "", role: "Actor" },
+  { title: "Lilian, Next Door", year: "", role: "Actor" },
+  { title: "Jeffrey's Turn 111", year: "", role: "Actor" },
+  { title: "We Were Liars", year: "", role: "Actor" },
+  { title: "Sullivan's Crossing", year: "", role: "Actor" },
+  { title: "The Trades", year: "", role: "Actor" },
+  { title: "The Sinner", year: "", role: "Actor" },
+  { title: "Hallmark Movies", year: "", role: "Actor" },
+  { title: "Trailer Park Boys", year: "", role: "Actor" },
+];
+
+export const teachingCredits = [
+  {
+    institution: "NSCC",
+    program: "Digital Animation Program",
+    role: "Part-time Instructor: 3D Digital Sculpting II",
+    years: "2025–Present",
+  },
+  {
+    institution: "Independent",
+    program: "Percussion",
+    role: "Part-time Instructor",
+    years: "2001–Present",
+  },
+];
+
+export const education = [
+  {
+    credential: "Virtual Production – Art Department Content Creation",
+    institution: "Seneca Polytechnic, Toronto, ON",
+    year: "2023",
+  },
+  {
+    credential: "Bachelor of Arts – Social Science",
+    institution: "University of Windsor, Windsor, ON",
+    year: "2017",
+  },
+  {
+    credential: "3D Animation",
+    institution: "Seneca College, Toronto, ON",
+    year: "2001",
+  },
+];
+
+export const software = [
+  "Adobe Illustrator 2026",
+  "Adobe Photoshop 2026",
+  "Adobe Premiere 26.0",
+  "Autodesk Maya 2025",
+  "Maxon ZBrush 2026.1",
+  "Unreal Engine 5.5",
+  "Substance Painter 12.x",
+  "MS Office 365",
+];
+
+export const qualifications = ["WHMIS", "Class 4 Driver's License"];
 
 export const filmCredits: Credit[] = [
   {

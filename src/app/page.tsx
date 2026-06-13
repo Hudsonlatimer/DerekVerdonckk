@@ -1,4 +1,4 @@
-import { bio, contacts, filmCredits, tvAnimationCredits } from "@/lib/data";
+import { bio, tagline, contacts, filmCredits, tvAnimationCredits, actingCredits, teachingCredits, education, software, qualifications } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -8,10 +8,15 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
           Derek Verdonck
         </h1>
-        <p className="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10">
-          {bio}
+        <p className="text-base sm:text-lg text-amber-500/90 font-medium mb-6 leading-relaxed">
+          {tagline}
         </p>
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-3 sm:gap-x-8">
+        {bio.split("\n\n").map((para, i) => (
+          <p key={i} className="text-base sm:text-lg text-gray-400 leading-relaxed mb-4">
+            {para}
+          </p>
+        ))}
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-3 sm:gap-x-8 mt-10">
           {contacts.map((c) => (
             <a
               key={c.platform}
@@ -73,6 +78,70 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Acting */}
+          <div>
+            <h3 className="text-lg sm:text-xl font-medium mb-6 pb-2 border-b border-white/10">Acting</h3>
+            <div className="grid gap-4">
+              {actingCredits.map((credit, i) => (
+                <div key={i} className="grid grid-cols-[72px_1fr] sm:grid-cols-[100px_1fr_220px] gap-x-4 gap-y-1">
+                  <div className="text-gray-500 text-sm shrink-0 pt-0.5">{credit.year}</div>
+                  <div className="font-medium text-gray-200">{credit.title}</div>
+                  <div className="text-gray-400 text-sm col-start-2 sm:col-start-3">{credit.role}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Teaching */}
+          <div>
+            <h3 className="text-lg sm:text-xl font-medium mb-6 pb-2 border-b border-white/10">Teaching</h3>
+            <div className="grid gap-6">
+              {teachingCredits.map((t, i) => (
+                <div key={i} className="grid grid-cols-[72px_1fr] sm:grid-cols-[100px_1fr_220px] gap-x-4 gap-y-1">
+                  <div className="text-gray-500 text-sm shrink-0 pt-0.5">{t.years}</div>
+                  <div>
+                    <div className="font-medium text-gray-200">{t.program}</div>
+                    <div className="text-sm text-gray-500 mt-0.5">{t.institution}</div>
+                  </div>
+                  <div className="text-gray-400 text-sm col-start-2 sm:col-start-3 mt-0.5">{t.role}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section id="education">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-8 uppercase tracking-widest text-gray-500">Education & Training</h2>
+        <div className="grid gap-6 max-w-3xl">
+          {education.map((e, i) => (
+            <div key={i} className="grid grid-cols-[72px_1fr] sm:grid-cols-[100px_1fr] gap-x-4">
+              <div className="text-gray-500 text-sm shrink-0 pt-0.5">{e.year}</div>
+              <div>
+                <div className="font-medium text-gray-200">{e.credential}</div>
+                <div className="text-sm text-gray-500 mt-0.5">{e.institution}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Software & Skills */}
+      <section id="skills">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-8 uppercase tracking-widest text-gray-500">Software & Skills</h2>
+        <div className="flex flex-wrap gap-3">
+          {software.map((s, i) => (
+            <span key={i} className="text-sm text-gray-300 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+              {s}
+            </span>
+          ))}
+          {qualifications.map((q, i) => (
+            <span key={i} className="text-sm text-gray-400 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+              {q}
+            </span>
+          ))}
         </div>
       </section>
 
