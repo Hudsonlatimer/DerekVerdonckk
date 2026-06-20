@@ -79,12 +79,20 @@ Derek Verdonck is a 3D computer animator transitioning into Film Art Departments
 | CV & Credits — TV Animation | ✅ Built with real data |
 | Inspiration (masonry grid) | ✅ Built (placeholder images) |
 | Footer + contact links | ✅ Built |
-| Quotes section | ⏳ Waiting on Derek's 3 contacts |
-| Real bio text | ⏳ Waiting on Jenell |
-| Real images / screen grabs | ⏳ Waiting on Google Drive folder |
-| IMDB URL | ⏳ Waiting on Derek |
-| LinkedIn URL | ⏳ Waiting on Derek |
-| Studio logos | ⏳ To add after content arrives |
+| Real bio text | ✅ Added (tweak incoming from Derek) |
+| IMDB URL | ✅ Added |
+| LinkedIn URL | ✅ Added |
+| Acting / Teaching / Education / Software | ✅ Built |
+| Studio logos | ✅ Built — B&W scrolling ribbon ("Studios & Production Companies") |
+| Endorsements section | 🔧 Built above footer/contact, hidden until quotes added to `data.ts` (2 of 4 received). Dedicated testimonial design once all 4 are in. |
+| Real images / screen grabs | ⏸ Inspiration + "Script Called For" tabs paused per Jenell |
+| External blog (replaces Inspiration tab) | ⏳ **Medium** (Huddy's pick) — Derek creates it, we link from nav |
+
+### Placement decisions (confirmed with client)
+- **Logos:** scrolling ribbon, uniform size, black & white — ✅ done.
+- **Endorsements:** homepage, **above the contact section** (footer) — ✅ section placed there.
+- **Blog:** **Medium**, linked from the site to replace Inspiration/Script Called For.
+- **Timeline:** client sends edits/logos/quotes/bio together within ~1 week; Huddy implements.
 
 ---
 

@@ -1,4 +1,5 @@
-import { bio, tagline, contacts, filmCredits, tvAnimationCredits, actingCredits, teachingCredits, education, software, qualifications } from "@/lib/data";
+import { bio, tagline, contacts, filmCredits, tvAnimationCredits, actingCredits, teachingCredits, education, software, qualifications, quotes } from "@/lib/data";
+import LogoRibbon from "@/components/LogoRibbon";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
           Derek Verdonck
         </h1>
-        <p className="text-base sm:text-lg text-amber-500/90 font-medium mb-6 leading-relaxed">
+        <p className="text-base sm:text-lg text-amber-500/90 font-medium mb-8 leading-relaxed">
           {tagline}
         </p>
         {bio.split("\n\n").map((para, i) => (
@@ -16,20 +17,6 @@ export default function Home() {
             {para}
           </p>
         ))}
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-3 sm:gap-x-8 mt-10">
-          {contacts.map((c) => (
-            <a
-              key={c.platform}
-              href={c.url}
-              target={c.url.startsWith("http") ? "_blank" : undefined}
-              rel={c.url.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <span className="text-gray-600 uppercase tracking-wider text-xs w-14 shrink-0">{c.platform}</span>
-              <span>{c.label}</span>
-            </a>
-          ))}
-        </div>
       </section>
 
       {/* The Script Called For — paused per Jenell */}
@@ -140,6 +127,58 @@ export default function Home() {
             <span key={i} className="text-sm text-gray-400 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
               {q}
             </span>
+          ))}
+        </div>
+      </section>
+
+      {/* Studios & Production Companies */}
+      <section id="studios">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase tracking-widest text-gray-500">Studios &amp; Production Companies</h2>
+        <p className="text-sm text-gray-500 mb-10 max-w-2xl">
+          Two decades of work across some of the most recognized names in animation and film.
+        </p>
+        <LogoRibbon />
+      </section>
+
+      {/* Endorsements — placed above the footer/contact for social proof.
+          Renders only once quotes are added in data.ts (2 of 4 in so far). */}
+      {quotes.length > 0 && (
+        <section id="endorsements">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-8 uppercase tracking-widest text-gray-500">Endorsements</h2>
+          <div className="grid gap-10 sm:grid-cols-2">
+            {quotes.map((q, i) => (
+              <figure key={i} className="border-l-2 border-amber-500/40 pl-6">
+                <blockquote className="text-base sm:text-lg text-gray-300 leading-relaxed italic">
+                  &ldquo;{q.text}&rdquo;
+                </blockquote>
+                <figcaption className="mt-4 text-sm">
+                  <span className="text-gray-200 font-medium">{q.author}</span>
+                  {q.title && <span className="text-gray-500"> — {q.title}</span>}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Let's Work Together — contact CTA (from outline) */}
+      <section id="contact">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-6 uppercase tracking-widest text-gray-500">Let&rsquo;s Work Together</h2>
+        <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl mb-8">
+          Available for film art department, animation, and virtual production work. Get in touch.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {contacts.map((c) => (
+            <a
+              key={c.platform}
+              href={c.url}
+              target={c.url.startsWith("http") ? "_blank" : undefined}
+              rel={c.url.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="text-sm text-gray-200 bg-white/5 border border-white/15 hover:border-white/40 hover:bg-white/10 px-5 py-2.5 rounded-full transition-colors"
+            >
+              <span className="text-gray-500 uppercase tracking-wider text-xs mr-2">{c.platform}</span>
+              {c.label}
+            </a>
           ))}
         </div>
       </section>

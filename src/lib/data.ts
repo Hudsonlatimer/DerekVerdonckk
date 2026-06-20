@@ -69,7 +69,7 @@ export const education = [
 ];
 
 export const software = [
-  "Adobe Illustrator 2026",
+  "Adobe Illustrator 2026 (v30.2)",
   "Adobe Photoshop 2026",
   "Adobe Premiere 26.0",
   "Autodesk Maya 2025",
@@ -80,6 +80,21 @@ export const software = [
 ];
 
 export const qualifications = ["WHMIS", "Class 4 Driver's License"];
+
+export type Quote = {
+  text: string;
+  author: string;
+  title?: string; // role / studio of the person endorsing
+};
+
+// Endorsements from Derek's contacts. Add each as it arrives (2 of 4 in so far).
+export const quotes: Quote[] = [
+  // {
+  //   text: "…",
+  //   author: "Name",
+  //   title: "Role, Studio",
+  // },
+];
 
 export const filmCredits: Credit[] = [
   {
@@ -95,7 +110,7 @@ export const filmCredits: Credit[] = [
   {
     title: "Sullivan's Crossing Season 4",
     year: "2025",
-    role: "3rd Assistant Art Director",
+    role: "Production Assistant",
   },
   {
     title: "Sullivan's Crossing Season 3, 4 & 5",
