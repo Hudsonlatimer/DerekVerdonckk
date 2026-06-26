@@ -47,7 +47,7 @@ export default function LogoRibbon() {
             alt={logo.alt}
             width={200}
             height={80}
-            className={`w-auto max-w-[140px] h-12 sm:h-14 object-contain opacity-60 transition-opacity duration-300 hover:opacity-100 ${
+            className={`w-auto max-w-[140px] h-12 sm:h-14 object-contain opacity-60 grayscale transition-opacity duration-300 hover:opacity-100 ${
               logo.className || ""
             }`}
           />
