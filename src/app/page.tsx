@@ -165,7 +165,7 @@ export default function Home() {
       <section id="contact">
         <h2 className="text-xl sm:text-2xl font-semibold mb-6 uppercase tracking-widest text-gray-500">Let&rsquo;s Work Together</h2>
         <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl mb-8">
-          Available for film art department, animation, and virtual production work. Get in touch.
+          Available for film, animation, and virtual production work. Get in touch.
         </p>
         <div className="flex flex-wrap gap-3">
           {contacts.map((c) => (

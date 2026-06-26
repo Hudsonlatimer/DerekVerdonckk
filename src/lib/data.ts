@@ -1,15 +1,16 @@
 export const tagline =
-  "Collaborative. Creative. Dependable. For 25 years, Derek has worked with directors, production designers, and creative crews to deliver top-tier storytelling on time, on budget, and always with a collaborative spirit.";
+  "Creative. Dependable. Collaborative. For 25 years, Derek has partnered with directors, production designers, and creative crews to bring world-class storytelling to life. Known for balancing artistic vision with practical execution, he consistently delivers exceptional results on time, on budget, and with a solution-oriented mindset.";
 
 export const bio = `Whether it's bringing an iconic cartoon character to life or creating props for a prime-time television drama, Derek Verdonck loves a good story. More importantly, he knows exactly how to build the worlds they live in.
 
 With over two decades of experience in the animation, virtual production and film industries, Derek's career has been an exciting journey of visual problem-solving. He got his start pushing the boundaries of digital movement, contributing previsualization artistry to the groundbreaking, Academy Award-winning animated short Ryan (2004). From there, he spent years collaborating with major entertainment powerhouses like Disney, Sony, Nelvana, and the Jim Henson Company, serving as a lead animator and layout supervisor.
 
-From Bob the Builder to Bubble Guppies, Derek has helped shape some of the most recognizable animated worlds on television, contributing to projects honoured by the Oscars, Emmys, and Annie Awards. Never content to stand still, Derek is currently expanding his toolkit into virtual production, leveraging Unreal Engine to bridge the gap between traditional filmmaking and real-time digital environments.`;
+From Bob the Builder to Bubble Guppies, Derek has helped shape some of the most recognizable animated worlds on television, contributing to projects honoured by the Oscars, Emmys, and Annie Awards. Never content to stand still, Derek is currently expanding their toolkit into virtual production, leveraging Unreal Engine to bridge the gap between traditional filmmaking and real-time digital environments.`;
 
 export const contacts = [
   { platform: "LinkedIn", url: "https://ca.linkedin.com/in/derek-verdonck-05327352", label: "LinkedIn" },
   { platform: "IMDb", url: "https://www.imdb.com/name/nm2447901/", label: "IMDb" },
+  { platform: "Medium", url: "https://medium.com/@derek.verdonck", label: "Medium" },
   { platform: "Email", url: "mailto:derek.verdonck@gmail.com", label: "derek.verdonck@gmail.com" },
   { platform: "Phone", url: "tel:9028807643", label: "902.880.7643" },
 ];
@@ -26,7 +27,8 @@ export const actingCredits: Credit[] = [
   { title: "FROM", year: "2019–Present", role: "Season 1–5" },
   { title: "The Institute", year: "", role: "Actor" },
   { title: "Lilian, Next Door", year: "", role: "Actor" },
-  { title: "Jeffrey's Turn 111", year: "", role: "Actor" },
+  { title: "Jeffrey's Turn", year: "", role: "Actor" },
+  { title: "111", year: "", role: "Actor" },
   { title: "We Were Liars", year: "", role: "Actor" },
   { title: "Sullivan's Crossing", year: "", role: "Actor" },
   { title: "The Trades", year: "", role: "Actor" },
@@ -38,8 +40,8 @@ export const actingCredits: Credit[] = [
 export const teachingCredits = [
   {
     institution: "NSCC",
-    program: "Digital Animation Program",
-    role: "Part-time Instructor: 3D Digital Sculpting II",
+    program: "3D Digital Animation",
+    role: "Part-time Instructor",
     years: "2025–Present",
   },
   {
@@ -87,13 +89,23 @@ export type Quote = {
   title?: string; // role / studio of the person endorsing
 };
 
-// Endorsements from Derek's contacts. Add each as it arrives (2 of 4 in so far).
+// Endorsements from Derek's contacts. There may be 1-2 more coming.
 export const quotes: Quote[] = [
-  // {
-  //   text: "…",
-  //   author: "Name",
-  //   title: "Role, Studio",
-  // },
+  {
+    text: "A chameleon among artists, Derek's adaptable abilities and talents are a must have for any production's needs.",
+    author: "Jeff Astolfo",
+    title: "Series Director",
+  },
+  {
+    text: "Derek's positive attitude makes him easy to approach to ask for his advice on technical issues or creative ideas. He is a talented and dependable animator who delivers great animation on time.",
+    author: "Gavin Soares",
+    title: "Artist and Animator",
+  },
+  {
+    text: "To simply say Derek is a talented artist doesn't really tell the whole story. The warmth he brings with him spills into his work in honest and creative ways. Never afraid to try something new, he steps up every day. He has an energy that is infectious even in a crunch.",
+    author: "Darlene Lewis",
+    title: "Film Set Decorator",
+  },
 ];
 
 export const filmCredits: Credit[] = [
