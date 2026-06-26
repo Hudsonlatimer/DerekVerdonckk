@@ -26,7 +26,7 @@ const logos = [
     className: "invert mix-blend-screen" 
   },
   { 
-    src: "/logos/nbc.png", 
+    src: "/logos/NBCUniversalNewsGroup_logo_stacked_gradient.png", 
     alt: "NBC Universal",
     className: "invert mix-blend-screen" 
   },
