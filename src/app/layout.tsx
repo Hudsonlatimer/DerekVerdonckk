@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Derek Verdonck | Film Art Department & 3D Animation",
   description: "Portfolio of Derek Verdonck, featuring work in Film Art Departments and 3D Animation.",
+  icons: {
+    icon: "/headshot.jpg",
+  },
 };
 
 export default function RootLayout({

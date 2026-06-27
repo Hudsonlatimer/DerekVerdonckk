@@ -1,11 +1,23 @@
 import { bio, tagline, contacts, filmCredits, tvAnimationCredits, actingCredits, teachingCredits, education, software, qualifications, quotes } from "@/lib/data";
 import LogoRibbon from "@/components/LogoRibbon";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24 sm:space-y-32">
       {/* Hero / Bio */}
       <section id="bio" className="max-w-3xl pt-12">
+        <div className="mb-16 flex justify-center">
+          <div className="relative w-56 h-64 sm:w-64 sm:h-72 rounded-full overflow-hidden shadow-lg">
+            <Image
+              src="/headshot.jpg"
+              alt="Derek Verdonck"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+        </div>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
           Derek Verdonck
         </h1>
